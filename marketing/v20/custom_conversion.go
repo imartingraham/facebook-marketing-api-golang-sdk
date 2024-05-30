@@ -8,7 +8,7 @@ import (
 	"net/url"
 
 	"github.com/imartingraham/facebook-marketing-api-golang-sdk/fb"
-	"github.com/imartingraham/facebook-marketing-api-golang-sdk/marketing/v16/types"
+	"github.com/imartingraham/facebook-marketing-api-golang-sdk/marketing/v20/types"
 )
 
 // CustomConversionService contains all methods for working on custom conversions.

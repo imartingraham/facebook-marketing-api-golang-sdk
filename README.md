@@ -44,11 +44,11 @@ We assume you already have a Facebook Developer account and configured an `acces
 
 ```go
 import(
-	"github.com/imartingraham/facebook-marketing-api-golang-sdk/marketing/v16"
+	"github.com/imartingraham/facebook-marketing-api-golang-sdk/marketing/v20"
 )
 
 func main(){
-	fbService, _ := v16.New(l, accessToken, appSecret)
+	fbService, _ := v20.New(l, accessToken, appSecret)
 	
 	// [Code snippets from other example below go here]
 }
@@ -57,7 +57,7 @@ func main(){
 ### Create a campaign
 
 ```go
-c := v16.Campaign{
+c := v20.Campaign{
 	// Populate struct values
 }
 id, _ := fbService.Campaigns.Create(ctx, c)
@@ -117,7 +117,7 @@ report.Level("adset").
 			DatePreset("lifetime") // the time period for the report
 
 // pass a channel which gets populated with results
-ch := make(chan v16.Insight)
+ch := make(chan v20.Insight)
 nRecords,_ := report.GenerateReport(ctx,ch)
 
 //range over the channel to get Insight objects
