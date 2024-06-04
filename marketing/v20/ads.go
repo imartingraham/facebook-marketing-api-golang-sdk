@@ -75,7 +75,7 @@ func (as *AdService) Update(ctx context.Context, a Ad) error {
 // List returns all ads of an account.
 func (as *AdService) List(act string) *AdListCall {
 	return &AdListCall{
-		RouteBuilder: fb.NewRoute(Version, "/act_%s/ads", act).Fields("adset_id", "creative", "id", "name", "account_id", "adset{id}", "adcreatives{id}").Limit(1000),
+		RouteBuilder: fb.NewRoute(Version, "/act_%s/ads", act).Fields("adset_id", "creative", "id", "name", "status", "account_id", "adset{id}", "adcreatives{id}").Limit(1000),
 		c:            as.c,
 	}
 }
